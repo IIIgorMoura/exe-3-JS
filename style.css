@@ -14,8 +14,16 @@ img {
     width: 100%;
     height: auto;
 }
+
 /* fim reset */
 /* background */
+:root {
+    --corPage: #414141;
+    --corErro: #cf1919;
+    --corLimitado: #dfc412;
+    --corLivre: #60ca22;
+}
+
 body {
     background-color: var(--corPage);
 }

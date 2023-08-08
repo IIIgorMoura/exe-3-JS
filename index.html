@@ -13,16 +13,26 @@
 <body>
 
     <section class="fundo">
+
         <div class="box">
+
+            <p class="txt" id="verificar"></p>
+
+            <label class="txt" id="rotulo">Insira o código:</label>
+            <input type="number" class="txt" id="senha" min="0">
             <button class="botao" id="entrar" onclick="jose()">Entrar</button>
+
         </div>
     </section>
 
     <script>
+
+
         let cor = document.body.style;
 
         function jose() {
-            let acessar = Number(prompt("Insira o código"));
+            let acessar = document.getElementById("senha").value;
+            let conferir = document.getElementById("entrar");
 
             if (acessar <= 999) {
 
@@ -47,22 +57,40 @@
 
             switch (acesso) {
                 case "Liberado":
-                    cor.backgroundColor = "green";
+                    cor.backgroundColor = "#60ca22";
                     break
 
 
                 case "Limitado":
-                    cor.backgroundColor = "yellow";
+                    cor.backgroundColor = "#dfc412";
                     break
 
                 case "Negado":
-                    cor.background = "red";
+                    cor.background = "#cf1919";
                     break;
 
                 default:
-                    cor.backgroundColor = "white";
+                    cor.backgroundColor = "#414141";
             }
         };
+
+
+        // acesso.addEventListener("click", function () {
+        //     let senha = document.getElementById("senha").value;
+        //     numero = document.getElementById("senha").value;
+
+        //     if (senha = 3000) {
+
+        //         document.getElementById("verificar").innerHTML = "ry: " + numero;
+
+        //         if (senha = 2000) {
+        //             numero = document.getElementById("senha").value;
+        //             document.getElementById("verificar").innerHTML = "ryrthgbf: " + numero;
+        //         };
+        //     };
+
+        // });
+
     </script>
 
 </body>
