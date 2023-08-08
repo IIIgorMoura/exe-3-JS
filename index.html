@@ -12,11 +12,58 @@
 
 <body>
 
-        <section class="fundo">
-            <label class="txt" id="rotulo">Insira o código:</label>
-            <input type="number" class="txt" id="senha">
-            <button class="botao" id="entrar">Entrar</button>
-        </section>
+    <section class="fundo">
+        <div class="box">
+            <button class="botao" id="entrar" onclick="jose()">Entrar</button>
+        </div>
+    </section>
+
+    <script>
+        let cor = document.body.style;
+
+        function jose() {
+            let acessar = Number(prompt("Insira o código"));
+
+            if (acessar <= 999) {
+
+                alert("Insira um valor válido");
+
+            }
+
+            else if (acessar >= 1000 && acessar <= 1999) {
+                var acesso = "Liberado"
+                alert("Acesso total");
+            }
+
+            else if (acessar >= 2000 && acessar <= 2999) {
+                var acesso = "Limitado"
+                alert("Acesso limitado");
+            }
+
+            else {
+                var acesso = "Negado";
+                alert("Acesso negado");
+            }
+
+            switch (acesso) {
+                case "Liberado":
+                    cor.backgroundColor = "green";
+                    break
+
+
+                case "Limitado":
+                    cor.backgroundColor = "yellow";
+                    break
+
+                case "Negado":
+                    cor.background = "red";
+                    break;
+
+                default:
+                    cor.backgroundColor = "white";
+            }
+        };
+    </script>
 
 </body>
 

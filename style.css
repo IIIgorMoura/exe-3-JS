@@ -14,16 +14,8 @@ img {
     width: 100%;
     height: auto;
 }
-
 /* fim reset */
 /* background */
-:root {
-    --corPage: #000;
-    --corErro: #cf1919;
-    --corLimitado: #dfc412;
-    --corLivre: #60ca22;
-}
-
 body {
     background-color: var(--corPage);
 }
@@ -33,6 +25,17 @@ body {
 
     width: 100vw;
     height: 100vh;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box {
+    display: flex;
+
+    width: 500px;
+    height: 400px;
 
     justify-content: center;
     align-items: center;
