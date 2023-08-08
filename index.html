@@ -26,33 +26,31 @@
     </section>
 
     <script>
-
-
         let cor = document.body.style;
 
         function jose() {
             let acessar = document.getElementById("senha").value;
             let conferir = document.getElementById("entrar");
 
+            let resultado = document.getElementById("verificar").innerHTML;
+
             if (acessar <= 999) {
-
-                alert("Insira um valor válido");
-
+                document.getElementById("verificar").innerHTML = "Insira um valor válido";
             }
 
             else if (acessar >= 1000 && acessar <= 1999) {
                 var acesso = "Liberado"
-                alert("Acesso total");
+                document.getElementById("verificar").innerHTML = "Acesso liberado";
             }
 
             else if (acessar >= 2000 && acessar <= 2999) {
                 var acesso = "Limitado"
-                alert("Acesso limitado");
+                document.getElementById("verificar").innerHTML = "Acesso limitado";
             }
 
             else {
                 var acesso = "Negado";
-                alert("Acesso negado");
+                document.getElementById("verificar").innerHTML = "Acesso negado";
             }
 
             switch (acesso) {
@@ -73,24 +71,6 @@
                     cor.backgroundColor = "#414141";
             }
         };
-
-
-        // acesso.addEventListener("click", function () {
-        //     let senha = document.getElementById("senha").value;
-        //     numero = document.getElementById("senha").value;
-
-        //     if (senha = 3000) {
-
-        //         document.getElementById("verificar").innerHTML = "ry: " + numero;
-
-        //         if (senha = 2000) {
-        //             numero = document.getElementById("senha").value;
-        //             document.getElementById("verificar").innerHTML = "ryrthgbf: " + numero;
-        //         };
-        //     };
-
-        // });
-
     </script>
 
 </body>
